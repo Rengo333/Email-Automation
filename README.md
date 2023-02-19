@@ -42,3 +42,9 @@ It also needs to be in quotation marks as a string on line 48.
 
 # Log
 Program creates a log file to save data about every email sent and every exception.
+
+# Requirements
+Additional libraries are required to install.
+It is recommended to use a new virtual envinronment.
+Use this command in terminal to install requirements from requirements.txt.
+>pip install -r requirements.txt
