@@ -34,8 +34,10 @@ def send_emails():
     server = smtplib.SMTP('smtp-mail.outlook.com', 587)
     server.starttls()
     try:
+        name = 'YourAccount@hotmail.com'
+        psswrd = 'YourPassword'
         # Login to the Hotmail account, for safety purposes use your own email created at https://signup.live.com/?lic=1
-        server.login('YourAccount@hotmail.com', 'YourPassword')
+        server.login(name, psswrd)
 
         for i in email_list:
             try:
@@ -43,7 +45,7 @@ def send_emails():
                 # Compose the email message
                 message = MIMEMultipart("Please see report attached.")
                 message["Subject"] = "Test Email"
-                message["From"] = 'BrainNest_Project_C1@outlook.com'
+                message["From"] = name
                 message["To"] = f'{i}'
                 f = "report.pdf"
                 # Create the attachment
