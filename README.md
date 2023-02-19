@@ -16,15 +16,24 @@ You need to create an email account [here](https://signup.live.com/?lic=1).
 
 Type your email and password on line 37 and 38 in quotation marks as a string as follows: 
 
->name = 'YourAccount@hotmail.com'
->psswrd = 'YourPassword'
+>line 37 name = 'YourAccount@hotmail.com'
+>line 38 psswrd = 'YourPassword'
 
 You can choose recipients by typing their emails on line 31
 in square brackets and in quotation marks separated by a comma as follows:
 
 > line 31 email_list = ["Your@Emails1.com", "Your@Emails2.com", "Your@Emails3.com"]
 
+# Email message
+
+If you want to change the subject you can do so on lines 46-47
+the same way you did with email and password.
+
+> line 46 message = MIMEMultipart("Please see report attached.")
+> line 47 message["Subject"] = "Test Email"
+
 # Attachment
+
 Attachment will be send together with every email.
 It is up to you if you want to send a different file. 
 It also needs to be in quotation marks as a string on line 48.
